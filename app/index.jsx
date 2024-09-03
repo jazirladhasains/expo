@@ -23,7 +23,7 @@ export default function App() {
           <Image 
           source={images.path}
           className="w-[136px] h-[15px] absolute -bottom-2 -right-8" 
-          resizeMode="contain"></Image>
+          resizeMode="contain"/>
         </View>
       </ScrollView>
     </SafeAreaView>
