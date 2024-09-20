@@ -5,7 +5,7 @@ import { images } from '../../constants'
 import FormField from '../../components/FormField'
 import CustomButton from "../../components/CustomButton";
 import { Link } from 'expo-router'
-import { signIn } from '../../lib/appwrite'
+import { getCurrentUser, signIn } from '../../lib/appwrite'
 
 
 const SignIn = () => {
@@ -24,8 +24,11 @@ const SignIn = () => {
     try {
      await signIn(form.email, form.password);
 
-      //set it to global state
+      const result = await getCurrentUser();
+      setUser(result);
+      setIsLoggedIn(true);
 
+      Alert.alert('Success', 'You have successfully signed in');
       router.replace('/home');
     } catch (error) {
       Alert.alert('Error', error.message)
