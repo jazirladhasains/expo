@@ -6147,10 +6147,10 @@ react-native-animatable@^1.4.0:
   dependencies:
     prop-types "^15.8.1"
 
-react-native-appwrite@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/react-native-appwrite/-/react-native-appwrite-0.2.2.tgz#5ecaec5866a9b293a1d485edfc62e558b9d8d071"
-  integrity sha512-7tPKqK1yexHh5wDRD2oqmEsDBrUjSJyMHK5XPNW5I/K7ks/cnER/KcpEJ/wCd1HEhjo4AtIqZBy5lL1PyV+rrA==
+react-native-appwrite@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/react-native-appwrite/-/react-native-appwrite-0.5.0.tgz#84762adaf7d7c5e40ae69d815735cf02b1ef8af7"
+  integrity sha512-wD6fCG6Tb5dOXMdT3pyGxDTF4rV+7oIUF0d54Hvew9ciepUTfPUq9RygW/Roa0VNoyKlpYbgPvn7+L0KVc36vQ==
   dependencies:
     expo-file-system "16.0.8"
     react-native "^0.73.6"
