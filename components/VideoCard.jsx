@@ -2,6 +2,7 @@ import { useState } from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 
 import { icons } from "../constants";
+import { ResizeMode, Video } from "expo-av";
 
 const VideoCard = ({ video: { title, thumbnail, video,
     users: {
@@ -44,7 +45,19 @@ const VideoCard = ({ video: { title, thumbnail, video,
       </View>
 
       {play ? (
-        <Text className="text-white">Playing</Text>
+        <Video 
+            source={{ uri: 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
+            //change to video and change videos on appwrite
+            className="w-full h-60 rounded-xl mt-3"
+            resizeMode={ResizeMode.CONTAIN}
+            useNativeControls
+            shouldPlay
+            onPlaybackStatusUpdate={(status) => {
+                if(status.didJustFinish) {
+                setPlay(false)
+                }
+            }}
+            />
       ) : (
         <TouchableOpacity
           activeOpacity={0.7}
