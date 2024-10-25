@@ -39,8 +39,7 @@ const TrendingItem = ( {activeItem, item }) => {
     >
       {play ? (
         <Video 
-          source={{ uri: 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
-          //change to item.video and change videos on appwrite
+          source={{ uri: item.video }}
           className="w-52 h-72 rounded-[35px] mt-3 bg-white/10"
           resizeMode={ResizeMode.CONTAIN}
           useNativeControls
@@ -51,7 +50,7 @@ const TrendingItem = ( {activeItem, item }) => {
             }
           }}
         />
-        // console.log(item.video)
+        
       ) : (
         <TouchableOpacity
           className="relative justify-center items-center"
