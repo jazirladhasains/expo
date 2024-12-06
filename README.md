@@ -8,4 +8,4 @@ run npm install
 
 then run
 
-npx expo start -c
+npx expo start --go
